@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 4</title>
+    <style>
+    /*    Your code here  */    
+    .errormsg {
+      color: red;
+      display: none;
+    }
+    </style>
+    
+    <script type="text/javascript">
+    /*    Your code here  */    
+    function checkForm() {
+
+      if (document.getElementById("fullname").value == "") {
+        console.log("no fullname");
+        document.getElementById("nameerrormsg").style.display="initial"
+      }
+      else{
+        console.log("has fullname");
+        document.getElementById("nameerrormsg").style.display="none"
+      }
+
+      if (document.getElementById("streetaddr").value == "") {
+        console.log("no addr");
+        document.getElementById("addrerrormsg").style.display="initial"
+      }
+      else{
+        console.log("has addr");
+        document.getElementById("addrerrormsg").style.display="none"
+      }
+      if (document.getElementById("streetaddr").value == "" || document.getElementById("fullname").value == "") {
+        return false
+      }
+    }
+    </script>
+</head>
+<body>
+	<form  action="mailto:me@fakeemail.com" onsubmit="return checkForm();">
+  <fieldset>
+
+    <legend>Personal details</legend>
+    <p>
+      <label>
+        Full name:
+        <input type="text" name="fullname" id="fullname">
+      </label>
+    </p>
+    <p class="errormsg" id="nameerrormsg">Please enter your name above</p>
+
+    <p>
+      <label>
+        Street Address:
+        <input type="text" name="streetaddr" id="streetaddr">
+      </label>
+    </p>
+    <p class="errormsg" id="addrerrormsg">Please enter your street address</p>
+
+  </fieldset>
+  <input type="submit" value="Submit it!"> 
+</form>
+</body>
+    <a href="challenge1.html">Challenge 1</a>
+</html>

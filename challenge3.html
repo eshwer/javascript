@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 3</title>
+    <script type="text/javascript">
+    /*    Your code here  */    
+    function checkForm() {
+      var straw = document.getElementById("optstraw")
+      var blue = document.getElementById("optblue")
+      if (straw.checked == false & blue.checked == false) {
+        alert("Please select your favorite berry!")
+        return false
+      }
+      else {
+        return true
+      }
+    }
+    </script>
+</head>
+<body>
+	<form action="mailto:me@fakeemail.com" onsubmit= 
+	"return checkForm()">
+  <fieldset>
+    <legend>Radio buttons and Check Boxes</legend>
+    <p>
+      What's your favorite berry?: 
+      <label>
+        <input type="radio" value="male" name="favfruit" id="optstraw">
+        Strawberries
+      </label>
+      <label>
+        <input type="radio" value="female" name="favfruit" id="optblue">
+        Blueberries
+      </label>
+    </p>
+  </fieldset>
+
+  <input type="submit" value="Check it out!">
+</form>
+    <a href="challenge4.html">Challenge 4</a>
+</body>
+</html>
